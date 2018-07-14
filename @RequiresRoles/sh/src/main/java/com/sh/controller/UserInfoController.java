@@ -24,7 +24,7 @@ public class UserInfoController {
      * 注解@RequiresRoles：角色限制
      * 1.可以标记在类上。类中所有暴露出来的请求方法都将得到限制。
      * 2.可以标记在方法上。该方法将得到限制。
-     * value：可以同时写多个角色。如：
+     * value：可以同时写多个角色。如：@RequiresRoles(value = {"VIP1","VIP2"})
      * logical：value是一个字符串数组，意味着可以写多个角色，那么这些角色是都满足还是满足其中一个呢？
      * 该属性就是说明角色们之间的关系，有两个取值，分别为Logical.AND和Logical.OR，顾名思义，
      * Logical.AND：都满足。如：@RequiresRoles(value = {"VIP1","VIP2"})，你需要同时满足VIP1和VIP2才行。
