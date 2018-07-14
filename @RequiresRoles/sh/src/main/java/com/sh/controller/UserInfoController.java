@@ -21,8 +21,7 @@ public class UserInfoController {
     /**
      * 获取用户信息
      *
-     * 请求方法可以使用@RequiresRoles注解进行角色限制。
-     * 注解@RequiresRoles：
+     * 注解@RequiresRoles：角色限制
      * 1.可以标记在类上。类中所有暴露出来的请求方法都将得到限制。
      * 2.可以标记在方法上。该方法将得到限制。
      * value：可以同时写多个角色。如：
@@ -30,11 +29,11 @@ public class UserInfoController {
      * 该属性就是说明角色们之间的关系，有两个取值，分别为Logical.AND和Logical.OR，顾名思义，
      * Logical.AND：都满足。如：@RequiresRoles(value = {"VIP1","VIP2"})，你需要同时满足VIP1和VIP2才行。
      * Logical.OR：满足其中一个。如：@RequiresRoles(value = {"VIP1","VIP2"})，你只需满足VIP1或VIP2。
-     * 2.@RequiresPermissions 权限限制
      *
      * @return
      */
     @RequiresRoles("VIP1")
+    @RequiresPermissions("save")
     @RequestMapping("/getUserInfo")
     @ResponseBody
     public UserInfo getUserInfo() {
