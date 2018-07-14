@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Cryptography：密码模块。
  *
  * 添加依赖
- * compile 'org.apache.shiro:shiro-spring:1.3.2'
+ * compile 'org.apache.shiro:shiro-spring-boot-starter:1.4.0'
  */
 @SpringBootApplication
 public class ShApplication {
